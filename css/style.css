@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
 
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
 .main__width {
     width: 1000px;
     margin: 0 auto;
@@ -25,8 +29,6 @@ header > div {
 .logo {
     text-transform: uppercase;
     color: #fff;
-    /*padding: 16px;*/
-    padding-left: 0;
 }
 
 .logo span {
@@ -64,9 +66,10 @@ header > div {
 .header__menu--dropdown {
     display: none;
     position: absolute;
-    left: -40px;
+    left: -10px;
     top: 40px;
     padding-top: 30px;
+    text-transform: capitalize;
 }
 
 .header__menu--dropdown li {
@@ -90,11 +93,77 @@ header > div {
     border-bottom: 10px solid black;
     position: absolute;
     top: 20px;
-    left: 70px;
+    left: 40px;
     z-index: 1;
 }
 
 /* display dropdown on hover */
 .header__menu > li:hover .header__menu--dropdown {
     display: block;
+}
+
+/* SECTION SLIDER */
+
+.section__slider {
+    width: 100%;
+    background-image: linear-gradient(white, lightgrey);
+}
+
+.section__slider > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* style buttons */
+.section__slider--button a {
+    color: #2fd2b7;
+    font-size: 42px;
+}
+
+.section__slider__gallery li {
+    display: flex;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 10px;
+}
+
+.section__slider__gallery li h2:not(span) {
+    color: #000;
+}
+
+.section__slider__gallery a {
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 1px solid #2fd2b7;
+    border-radius: 5px;
+    background-color: #2fd2b7;
+    color: white;
+    padding: 10px 30px;
+    margin-right: 50px;
+}
+
+.section__slider__gallery li > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.section__slider > div {
+    margin-top: 50px;
+}
+
+.section__slider__gallery h2 {
+    margin: 50px 50px 30px 0;
+}
+
+.section__slider__gallery p {
+    margin-right: 50px;
+    margin-bottom: 50px;
 }
