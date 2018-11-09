@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+
+.main__width {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header (logo+nav) */
+
+header {
+    width: 100%;
+    background-color: #000;
+}
+
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-transform: uppercase;
+    color: #fff;
+    /*padding: 16px;*/
+    padding-left: 0;
+}
+
+.logo span {
+    font-weight: 700;
+    color: #2fd2b7;
+}
+
+.header__menu {
+    display: flex;
+    text-transform: uppercase;
+}
+
+.header__menu li a {
+    display: block;
+    color: #fff;
+    padding: 20px;
+    font-weight: 700;
+}
+
+/*zeby bylo na maxa do prawej w kontenerze */
+.header__menu li:last-child a {
+    padding-right: 0;
+}
+/*+ symetria z lewej*/
+.header__menu li:first-child a {
+    padding-left: 0;
+}
+
+/*zeby zaczepic dropdown ktore bedzie absolute w stosunku do tego*/
+.header__menu li {
+    position: relative;
+}
+
+/*dropdown menu*/
+.header__menu--dropdown {
+    display: none;
+    position: absolute;
+    left: -40px;
+    top: 40px;
+    padding-top: 30px;
+}
+
+.header__menu--dropdown li {
+    color: white;
+    background-color: #000;
+    padding: 0 10px;
+}
+
+.header__menu--dropdown li a {
+    font-weight: normal;
+    padding: 10px;
+}
+
+/* arrow UP */
+.header__menu--dropdown:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    z-index: 1;
+}
+
+/* display dropdown on hover */
+.header__menu > li:hover .header__menu--dropdown {
+    display: block;
+}
