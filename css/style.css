@@ -119,6 +119,8 @@ header > div {
 .section__slider--button a {
     color: #2fd2b7;
     font-size: 42px;
+    /* większy obszar do klikania */
+    /*padding: 40px;*/
 }
 
 .section__slider__gallery li {
@@ -166,4 +168,66 @@ p {
 .section__slider__gallery p {
     margin-right: 50px;
     margin-bottom: 50px;
+}
+
+/* GALLERY */
+.section__chairs {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.section__chairs > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section__chairs__image {
+    width: 320px;
+    position: relative;
+}
+
+.section__chairs__image a h3 {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    padding-top: 15px;
+    padding-left: 10px;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 320px;
+    height: 60px;
+}
+
+h3 {
+    position: relative;
+    font-weight: 700;
+}
+
+.underline:after {
+    content: '';
+    width: 140px;
+    height: 5px;
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    background-color: #2fd2b7;
+}
+
+/* chairs -> opis */
+
+.section__chairs__description {
+    /* NIE LEPIEJ RÓWNE ?? */
+    width: 320px;
+    height: 240px;
+    border: 1px solid #d7d7d7;
+    padding: 20px;
+}
+
+.section__chairs__description p {
+    padding-top: 20px;
+}
+
+.section__chairs__description > .underline:after {
+    top: 20px;
+    left: 0;
 }
