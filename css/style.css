@@ -132,7 +132,7 @@ h2 {
 }
 
 p {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .section__slider__gallery li h2:not(span) {
@@ -186,7 +186,7 @@ p {
     position: relative;
 }
 
-.section__chairs__image a h3 {
+.section__chairs__image a h4 {
     position: absolute;
     top: 140px;
     left: 0;
@@ -198,7 +198,7 @@ p {
     height: 60px;
 }
 
-h3 {
+h4 {
     position: relative;
     font-weight: 700;
 }
@@ -219,7 +219,7 @@ h3 {
     /* NIE LEPIEJ RÓWNE ?? */
     width: 320px;
     height: 240px;
-    border: 1px solid #d7d7d7;
+    border: 1px solid #d5d5d5;
     padding: 20px;
 }
 
@@ -231,3 +231,164 @@ h3 {
     top: 20px;
     left: 0;
 }
+
+/* CENNIK */
+h3 {
+    position: relative;
+    font-size: 25px;
+}
+
+.section__prices > div > h3 {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.section__prices > div > .underline:after {
+    left: 0;
+    top: 30px;
+    width: 300px;
+}
+
+.section__prices {
+    margin: 25px 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    font-size: 25px;
+}
+
+.section__prices__plan {
+    position: relative;
+    background-color: #f9f9f9;
+    border: 2px solid #d5d5d5;
+    padding: 30px 0;
+    width: 320px;
+    height: 530px;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+}
+
+.section__prices > div > ul {
+    margin: 65px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    /*kolor planu, do nadpisania dla dalszych ponizej*/
+    color: #2fd2b7;
+}
+
+/* PRICE RING SETUP */
+
+.section__prices__plan--price {
+    position: relative;
+    color: #c2c2c2;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 50px 0 80px 0;
+    z-index: 1;
+}
+
+.section__prices__plan--price sup {
+    font-size: 25px;
+    font-weight: 700;
+
+    position: absolute;
+    top: 10px;
+    left: 180px;
+}
+
+.section__prices__plan--price span {
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    left: 115px;
+}
+
+.section__prices__plan--price:after {
+    content: '';
+    width: 140px;
+    height: 140px;
+    background-color: #fff;
+    border: 2px solid #d5d5d5;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    /*width 320*/
+    left: 90px;
+    z-index: -1;
+}
+
+/* nadpisanie stylu, naprzemian dla elementow ponizej planu */
+.section__prices__plan > ul li:not(.section__prices__plan--price) {
+    padding: 10px 0;
+}
+
+.section__prices__plan > ul li:nth-of-type(2n+2):not(:last-child) {
+    background-color: #e4e4e4;
+    color: #969696;
+}
+
+.section__prices__plan > ul li:nth-of-type(2n+3):not(:last-child) {
+    background-color: #eaeaea;
+    color: #757575;
+}
+
+/* kropka nad planem */
+.section__prices__plan > ul:before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: #c2c2c2;
+    border: 2px solid #d5d5d5;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -25px;
+    left: 135px;
+    box-shadow: inset 0 0 0 11px #fff;
+}
+
+/* 'DOŁĄCZ' button */
+
+.section__prices__plan a {
+    border-radius: 10px;
+    background-color: #2fd2b7;
+    color: #fff;
+    padding: 10px 30px;
+    position: absolute;
+    bottom: 15px;
+    left: 80px;
+}
+
+/* hover change */
+
+.section__prices__plan:hover {
+    background-color: #2fd2b7;
+    color: #fff;
+    border-color: #2fd2b7;
+}
+
+.section__prices__plan:hover .section__prices__plan--price {
+    color: #2fd2b7;
+}
+
+.section__prices__plan:hover > ul:before {
+    background-color: #2fd2b7;
+    border-color: #2fd2b7;
+}
+
+.section__prices__plan:hover .section__prices__plan--price:after {
+    border-color: #2fd2b7;
+}
+
+.section__prices__plan:hover > ul li:nth-of-type(2n+2):not(:last-child) {
+    background-color: #fff;
+    color: #969696;
+}
+
+.section__prices__plan:hover a {
+    background-color: #fff;
+    color: #2fd2b7;
+}
+
+/* FINISHED CENNIK */
+
