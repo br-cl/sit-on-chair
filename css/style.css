@@ -27,8 +27,8 @@ header > div {
 }
 
 .logo {
-    text-transform: uppercase;
     color: #fff;
+    font-size: 25px;
 }
 
 .logo span {
@@ -38,7 +38,6 @@ header > div {
 
 .header__menu {
     display: flex;
-    text-transform: uppercase;
 }
 
 .header__menu li a {
@@ -69,7 +68,6 @@ header > div {
     left: -10px;
     top: 40px;
     padding-top: 30px;
-    text-transform: capitalize;
 }
 
 .header__menu--dropdown li {
@@ -141,7 +139,6 @@ p {
 
 .section__slider__gallery a {
     font-size: 20px;
-    text-transform: uppercase;
     border: 1px solid #2fd2b7;
     border-radius: 5px;
     background-color: #2fd2b7;
@@ -253,7 +250,6 @@ h3 {
 
 .section__prices {
     margin: 50px 0 30px 0;
-    /* O CO TUTAJ CHODZI ??? */
     padding-bottom: 50px;
     width: 100%;
     background-color: #f1f1f1;
@@ -321,7 +317,7 @@ h3 {
     z-index: -1;
 }
 
-/* nadpisanie stylu, naprzemian dla elementow ponizej planu */
+/* nadpisanie stylu, na przemian dla elementow ponizej planu */
 .section__prices__plan > ul li:not(.section__prices__plan--price) {
     padding: 10px 0;
 }
@@ -399,20 +395,20 @@ h3 {
 /* CONTACT FORM */
 
 .section__contact__form {
-    margin-top: 30px;
+    margin-top: 50px;
     width: 100%;
     height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     flex-wrap: wrap;
 }
 
 .section__contact__form img,
-.section__contact__form input[type='submit'] {
+.section__contact__form input[type='submit']
+{
     width: 350px;
-    /*height: auto;*/
 }
 
 input[type='text'],
@@ -428,16 +424,18 @@ textarea {
     resize: none;
 }
 
-input[type='submit'] {
+.section__contact__form input[type='submit'] {
+    /* THIS border REMOVED SHADOW */
+    border: 1px solid #2fd2b7;
     border-radius: 10px;
     background-color: #2fd2b7;
     color: #fff;
+    /*width: 370px;*/
     padding: 30px 0;
     font-size: 33px;
     font-weight: 700;
 
-    box-shadow: none;
-    text-shadow: none;
+    margin-bottom: 5px;
 }
 
 /* custom checkbox */
@@ -508,3 +506,25 @@ input[type='submit'] {
 }
 
 /* CONTACT FORM END */
+
+/* FOOTER */
+footer {
+    margin-top: 60px;
+}
+
+footer > div,
+footer > div > div {
+    display: flex;
+    color: #979797;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer > div > div {
+    width: 370px;
+}
+
+footer .logo,
+footer .logo span {
+    color: #979797;
+}
